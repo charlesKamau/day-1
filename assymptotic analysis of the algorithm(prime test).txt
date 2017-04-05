@@ -1,0 +1,30 @@
+#The prime number time complexity
+def prime_num(n):
+    list_prime=[]
+    
+	for num in range(0, n+ 1):        
+		if num > 1:
+            
+			for i in range(2, num):
+               
+				if (num % i) == 0:
+                    
+					break
+       
+		else:
+                
+			list_prime.append(num)
+    
+			print(list_prime)
+
+user_input=int(input("Input the value of the upper bound\n"))
+
+print(prime_num(user_input))
+
+#Example
+In a range between 0 and 7 
+1. The algorithm will run 2 times to find the first prime number (N/2)
+2. The algorithm will run 3 times to find the second prime numner (N/3)
+3. The algorithm will run 5 time to find the second prime number (N/5)
+Therefore to find the run time the algorithm will take to get to the nth term will be N/N;
+hence its worst case scenario (Big Oh) is 0(nlogN)
